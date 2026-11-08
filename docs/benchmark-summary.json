@@ -1,0 +1,307 @@
+{
+  "provider": "extractive",
+  "retrieval": "lexical",
+  "warning": "Offline pipeline smoke measurements, not live LLM security evidence",
+  "runs": [
+    {
+      "file": "development-v2",
+      "id": "b76d600ef0c240bbbc7715295470b862",
+      "status": "completed",
+      "cases": 100,
+      "metrics": {
+        "baseline": {
+          "completed": 50,
+          "incomplete": 0,
+          "retrieval_exposure": {
+            "numerator": 25,
+            "denominator": 25,
+            "rate": 1.0
+          },
+          "conditional_attack_success": {
+            "numerator": 12,
+            "denominator": 25,
+            "rate": 0.48
+          },
+          "end_to_end_attack_success": {
+            "numerator": 12,
+            "denominator": 25,
+            "rate": 0.48
+          },
+          "raw_model_failure": {
+            "numerator": 12,
+            "denominator": 25,
+            "rate": 0.48
+          },
+          "detection_recall": {
+            "numerator": 25,
+            "denominator": 25,
+            "rate": 1.0
+          },
+          "detector_false_positive": {
+            "numerator": 0,
+            "denominator": 25,
+            "rate": 0.0
+          },
+          "false_block": {
+            "numerator": 0,
+            "denominator": 25,
+            "rate": 0.0
+          },
+          "legitimate_answer_success": {
+            "numerator": 25,
+            "denominator": 25,
+            "rate": 1.0
+          },
+          "latency_p50_ms": 0.96,
+          "latency_p95_ms": 1.3
+        },
+        "protected": {
+          "completed": 50,
+          "incomplete": 0,
+          "retrieval_exposure": {
+            "numerator": 25,
+            "denominator": 25,
+            "rate": 1.0
+          },
+          "conditional_attack_success": {
+            "numerator": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "end_to_end_attack_success": {
+            "numerator": 0,
+            "denominator": 25,
+            "rate": 0.0
+          },
+          "raw_model_failure": {
+            "numerator": 0,
+            "denominator": 25,
+            "rate": 0.0
+          },
+          "detection_recall": {
+            "numerator": 25,
+            "denominator": 25,
+            "rate": 1.0
+          },
+          "detector_false_positive": {
+            "numerator": 0,
+            "denominator": 25,
+            "rate": 0.0
+          },
+          "false_block": {
+            "numerator": 0,
+            "denominator": 25,
+            "rate": 0.0
+          },
+          "legitimate_answer_success": {
+            "numerator": 25,
+            "denominator": 25,
+            "rate": 1.0
+          },
+          "latency_p50_ms": 0.94,
+          "latency_p95_ms": 1.2
+        }
+      }
+    },
+    {
+      "file": "development-tail-v2",
+      "id": "61a9b300e1da414c818bb97a83b243db",
+      "status": "completed",
+      "cases": 20,
+      "metrics": {
+        "baseline": {
+          "completed": 10,
+          "incomplete": 0,
+          "retrieval_exposure": {
+            "numerator": 5,
+            "denominator": 5,
+            "rate": 1.0
+          },
+          "conditional_attack_success": {
+            "numerator": 3,
+            "denominator": 5,
+            "rate": 0.6
+          },
+          "end_to_end_attack_success": {
+            "numerator": 3,
+            "denominator": 5,
+            "rate": 0.6
+          },
+          "raw_model_failure": {
+            "numerator": 3,
+            "denominator": 5,
+            "rate": 0.6
+          },
+          "detection_recall": {
+            "numerator": 5,
+            "denominator": 5,
+            "rate": 1.0
+          },
+          "detector_false_positive": {
+            "numerator": 0,
+            "denominator": 5,
+            "rate": 0.0
+          },
+          "false_block": {
+            "numerator": 0,
+            "denominator": 5,
+            "rate": 0.0
+          },
+          "legitimate_answer_success": {
+            "numerator": 5,
+            "denominator": 5,
+            "rate": 1.0
+          },
+          "latency_p50_ms": 1.02,
+          "latency_p95_ms": 2.3
+        },
+        "protected": {
+          "completed": 10,
+          "incomplete": 0,
+          "retrieval_exposure": {
+            "numerator": 5,
+            "denominator": 5,
+            "rate": 1.0
+          },
+          "conditional_attack_success": {
+            "numerator": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "end_to_end_attack_success": {
+            "numerator": 0,
+            "denominator": 5,
+            "rate": 0.0
+          },
+          "raw_model_failure": {
+            "numerator": 0,
+            "denominator": 5,
+            "rate": 0.0
+          },
+          "detection_recall": {
+            "numerator": 5,
+            "denominator": 5,
+            "rate": 1.0
+          },
+          "detector_false_positive": {
+            "numerator": 0,
+            "denominator": 5,
+            "rate": 0.0
+          },
+          "false_block": {
+            "numerator": 0,
+            "denominator": 5,
+            "rate": 0.0
+          },
+          "legitimate_answer_success": {
+            "numerator": 5,
+            "denominator": 5,
+            "rate": 1.0
+          },
+          "latency_p50_ms": 1.12,
+          "latency_p95_ms": 1.37
+        }
+      }
+    },
+    {
+      "file": "held-out-v2",
+      "id": "6905c14c4a964cf29beb52728a3f1edc",
+      "status": "completed",
+      "cases": 40,
+      "metrics": {
+        "baseline": {
+          "completed": 20,
+          "incomplete": 0,
+          "retrieval_exposure": {
+            "numerator": 10,
+            "denominator": 10,
+            "rate": 1.0
+          },
+          "conditional_attack_success": {
+            "numerator": 6,
+            "denominator": 10,
+            "rate": 0.6
+          },
+          "end_to_end_attack_success": {
+            "numerator": 6,
+            "denominator": 10,
+            "rate": 0.6
+          },
+          "raw_model_failure": {
+            "numerator": 6,
+            "denominator": 10,
+            "rate": 0.6
+          },
+          "detection_recall": {
+            "numerator": 4,
+            "denominator": 10,
+            "rate": 0.4
+          },
+          "detector_false_positive": {
+            "numerator": 4,
+            "denominator": 10,
+            "rate": 0.4
+          },
+          "false_block": {
+            "numerator": 0,
+            "denominator": 10,
+            "rate": 0.0
+          },
+          "legitimate_answer_success": {
+            "numerator": 10,
+            "denominator": 10,
+            "rate": 1.0
+          },
+          "latency_p50_ms": 1.04,
+          "latency_p95_ms": 1.31
+        },
+        "protected": {
+          "completed": 20,
+          "incomplete": 0,
+          "retrieval_exposure": {
+            "numerator": 10,
+            "denominator": 10,
+            "rate": 1.0
+          },
+          "conditional_attack_success": {
+            "numerator": 4,
+            "denominator": 6,
+            "rate": 0.6666666666666666
+          },
+          "end_to_end_attack_success": {
+            "numerator": 4,
+            "denominator": 10,
+            "rate": 0.4
+          },
+          "raw_model_failure": {
+            "numerator": 4,
+            "denominator": 10,
+            "rate": 0.4
+          },
+          "detection_recall": {
+            "numerator": 4,
+            "denominator": 10,
+            "rate": 0.4
+          },
+          "detector_false_positive": {
+            "numerator": 4,
+            "denominator": 10,
+            "rate": 0.4
+          },
+          "false_block": {
+            "numerator": 4,
+            "denominator": 10,
+            "rate": 0.4
+          },
+          "legitimate_answer_success": {
+            "numerator": 6,
+            "denominator": 10,
+            "rate": 0.6
+          },
+          "latency_p50_ms": 1.01,
+          "latency_p95_ms": 1.23
+        }
+      }
+    }
+  ]
+}

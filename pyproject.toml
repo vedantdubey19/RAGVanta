@@ -1,0 +1,23 @@
+[project]
+name = "ragvanta"
+version = "0.1.0"
+description = "Local adversarial RAG security and evaluation laboratory"
+requires-python = ">=3.11"
+dependencies = ["fastapi>=0.115,<1", "uvicorn>=0.30,<1", "python-multipart>=0.0.18", "httpx>=0.27,<1", "pydantic-settings>=2.6,<3", "pymupdf>=1.24,<2"]
+[project.optional-dependencies]
+dashboard = ["streamlit>=1.40,<2"]
+semantic = ["sentence-transformers>=3,<6"]
+dev = ["pytest>=8,<10", "ruff>=0.9,<1", "pip-audit>=2.10,<3", "pyyaml>=6,<7", "streamlit>=1.40,<2"]
+[tool.pytest.ini_options]
+pythonpath = ["."]
+[tool.ruff]
+line-length = 100
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[tool.setuptools]
+packages = ["app", "app.web"]
+[tool.setuptools.package-data]
+app = ["web/*.html", "web/*.css", "web/*.js", "web/*.svg"]

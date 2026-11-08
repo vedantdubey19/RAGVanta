@@ -1,0 +1,23 @@
+services:
+  lab:
+    build:
+      context: .
+      args:
+        INSTALL_DASHBOARD: "1"
+    # Bind both services to the host loopback. In-container API also refuses remote callers.
+    network_mode: host
+    command: ["uvicorn", "app.main:app", "--host", "127.0.0.1", "--port", "8000", "--no-proxy-headers"]
+    env_file: .env
+    volumes:
+      - lab-data:/workspace/.runtime
+  dashboard:
+    build:
+      context: .
+      args:
+        INSTALL_DASHBOARD: "1"
+    network_mode: host
+    command: ["streamlit", "run", "dashboard/streamlit_app.py", "--server.address", "127.0.0.1", "--server.headless", "true", "--browser.gatherUsageStats", "false"]
+    env_file: .env
+    depends_on: [lab]
+volumes:
+  lab-data:

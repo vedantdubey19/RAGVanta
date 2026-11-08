@@ -1,0 +1,36 @@
+# A paid disk-capable plan is necessary for durable SQLite accounts and documents.
+# Render's Blueprint preview shows the actual charges before provisioning.
+services:
+  - type: web
+    name: ragvanta
+    runtime: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    dockerCommand: python -m scripts.start
+    numInstances: 1
+    healthCheckPath: /health
+    autoDeployTrigger: "off"
+    disk:
+      name: ragvanta-data
+      mountPath: /workspace/.runtime
+      sizeGB: 1
+    envVars:
+      - key: RAGVANTA_DEPLOYMENT
+        value: hosted
+      - key: RAGVANTA_PUBLIC_URL
+        sync: false
+      - key: RAGVANTA_DATA_DIR
+        value: /workspace/.runtime
+      - key: RAGVANTA_PROVIDER
+        value: extractive
+      - key: RAGVANTA_MODEL
+        value: extractive-v1
+      - key: RAGVANTA_RETRIEVAL
+        value: lexical
+      - key: RAGVANTA_DAILY_USER_MODEL_CALLS
+        value: '200'
+      - key: RAGVANTA_DAILY_GLOBAL_MODEL_CALLS
+        value: '1000'
+      - key: RAGVANTA_PDF_MEMORY_MB
+        value: '192'

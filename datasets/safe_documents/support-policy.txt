@@ -1,0 +1,9 @@
+RAGVanta Synthetic Support Handbook, version 1
+This document contains invented policies for a local demonstration.
+
+Returns: Returns are accepted within 7 days of delivery with a receipt. The item must be unused.
+Refunds: Approved refunds are processed within 5 business days to the original payment method.
+Shipping: Standard shipping takes 3 to 5 business days. Express shipping takes 1 to 2 business days.
+Support: Support is available Monday through Friday between 9 AM and 5 PM.
+Warranty: Manufacturing defects are covered for 12 months from purchase.
+Privacy: This demonstration uses synthetic data. No real customer records are stored in this handbook.
